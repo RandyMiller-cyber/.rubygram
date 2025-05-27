@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RubyGram</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #d10000;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 1em;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2em;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .post-form, .chat-section {
+      background: white;
+      padding: 1em;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .post {
+      background: #fff;
+      margin-bottom: 1em;
+      padding: 1em;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    .chat-box {
+      height: 200px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      margin-top: 1em;
+      padding: 1em;
+      border-radius: 4px;
+      background: #f1f1f1;
+    }
+    input[type="text"], input[type="file"], textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #d10000;
+      color: white;
+      padding: 0.8em 1.2em;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a00000;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>RubyGram</h1>
+    <p>Connecting Students, Alumni & Teachers</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Feed</a>
+    <a href="#">Chat</a>
+    <a href="#">Profile</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Post Upload Section -->
+    <div class="post-form">
+      <h2>Create a Post</h2>
+      <form>
+        <textarea placeholder="Share your thoughts..."></textarea>
+        <input type="file" accept="image/*,video/*"/>
+        <button type="submit">Post</button>
+      </form>
+    </div>
+
+    <!-- Feed Section -->
+    <div class="feed">
+      <div class="post">
+        <h3>Jane Doe</h3>
+        <p>Check out this photo from our alumni meet!</p>
+        <img src="sample-image.jpg" alt="Post Image" style="width:100%; max-height: 300px; object-fit: cover;" />
+      </div>
+
+      <div class="post">
+        <h3>Mr. Smith (Teacher)</h3>
+        <p>Excited to see everyone at the RubyGram launch!</p>
+        <video controls style="width:100%;">
+          <source src="sample-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <!-- Chat Section -->
+    <div class="chat-section">
+      <h2>Live Chat</h2>
+      <div class="chat-box" id="chatBox">
+        <p><strong>John (Student):</strong> Anyone attending the seminar tomorrow?</p>
+        <p><strong>Alumni123:</strong> I'll be there! Excited!</p>
+      </div>
+      <input type="text" placeholder="Type your message..." />
+      <button>Send</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
